@@ -31,6 +31,9 @@ build_toolchain()
 {
     cp ct-ng.defconfig crosstool-ng/.config
 
+    patch -f -p1 --directory=crosstool-ng <ct-ng-0001-isl-Update-mirror-URL.patch || \
+	    echo "NOTE: this patch has probably already been applied, skipping it"
+
     cd crosstool-ng/
     ./bootstrap
     ./configure --enable-local
@@ -57,7 +60,7 @@ pmufw_build()
     BSP_DIR="../misc/zynqmp_pmufw_bsp"
     BSP_TARGETS_DIR="${BSP_DIR}/psu_pmu_0/libsrc"
 
-    CROSS="${HOME}/x-tools/microblazeel-unknown-elf/bin/microblazeel-unknown-elf-"
+    CROSS="${HOME}/x-tools/microblazeel-xilinx-elf/bin/microblazeel-xilinx-elf-"
     CC=${CROSS}gcc
     AR=${CROSS}ar
     AS=${CROSS}as
