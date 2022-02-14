@@ -4,3 +4,4 @@
 [submodule "embeddedsw"]
 	path = embeddedsw
 	url = git://github.com/erique/embeddedsw.git
+	branch = kv260
