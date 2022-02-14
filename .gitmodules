@@ -3,4 +3,4 @@
 	url = git://github.com/crosstool-ng/crosstool-ng.git
 [submodule "embeddedsw"]
 	path = embeddedsw
-	url = git://github.com/Xilinx/embeddedsw.git
+	url = git://github.com/erique/embeddedsw.git
